@@ -18,6 +18,7 @@ plot2 <- function(){
      par(bg = "transparent")
      par(ps = "12")
      par(mar = c(4.1, 3.8, 3.4, 1))
+     par(col = "black")
      
      # Plot the graphic
      plot(dat$Complete_date, dat$Global_active_power, type = "l",
