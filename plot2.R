@@ -14,6 +14,9 @@ plot2 <- function(){
      # Add column for Date data (concat Date and Time column)
      dat$Complete_date <- strptime(paste(dat$Date, dat$Time), "%d/%m/%Y %H:%M:%S")
      
+     # Open device
+     png(filename = "plot2.png", width = 504, height = 504)
+     
      # Set parameter
      par(bg = "transparent")
      par(ps = "12")
@@ -25,7 +28,6 @@ plot2 <- function(){
           xlab = "", ylab = "Global Active Power (kilowatts)")
      
      
-     # Save into file
-     dev.copy(png, file = "plot2.png")
+     # Close device
      dev.off()
 }
