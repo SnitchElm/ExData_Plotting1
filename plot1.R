@@ -11,9 +11,13 @@ plot1 <- function(){
      
      rm(x)
      
+     # Open device
+     png(filename = "plot1.png", width = 504, height = 504)
+     
      # Set font size
      par(ps = "12")
      par(bg = "transparent")
+     par(col = "black")
      
      # Convert column to numeric
      dat$Global_active_power <- as.numeric(dat$Global_active_power)
@@ -22,7 +26,6 @@ plot1 <- function(){
      hist(dat$Global_active_power, xlab = "Global Active Power (kilowatts)", 
           main = "Global Active Power", col = "red")
      
-     # Save into file
-     dev.copy(png, file = "plot1.png")
+     # Close device
      dev.off()
 }
