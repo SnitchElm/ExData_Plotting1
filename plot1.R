@@ -13,6 +13,7 @@ plot1 <- function(){
      
      # Set font size
      par(ps = "12")
+     par(bg = "transparent")
      
      # Convert column to numeric
      dat$Global_active_power <- as.numeric(dat$Global_active_power)
